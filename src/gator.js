@@ -5,5 +5,10 @@ angular.module('ngl.gator', [])
 .run(function (gator) {
   'use strict';
 
-  angular.element.prototype.gator = gator;
+  angular.element.prototype.gator = function (/* events, selector, callback */) {
+    var element = this[0];
+    var delegate = gator(element);
+    delegate.on.apply(delegate, arguments);
+    return this;
+  };
 });
