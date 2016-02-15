@@ -1,0 +1,10 @@
+{
+  "name": "ngl.gator",
+  "version": "1.2.0",
+  "license": "MIT",
+  "main": "./src/gator.js",
+  "dependencies": {
+    "angular": "1.*",
+    "gator": "ccampbell/gator#^1.2.4"
+  }
+}
